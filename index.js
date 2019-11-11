@@ -91,6 +91,15 @@ $('#addFile').click(async function(event){
     const new_file = await contractCall('add_file', [name, description, file.hash],0);
     // return file.hash
 
+    const hash = file.hash
+
+  })
+
+
+  $('#download').click(async function(event){
+
+      await node.get(hash)
+
   })
     // console.log("File Added To The Contract:",new_file)
     // console.log("New File Name:",new_file.name)
