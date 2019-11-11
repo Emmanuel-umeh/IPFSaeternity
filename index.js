@@ -102,6 +102,8 @@ $('#addFile').click(async function(event){
 
   $('#download').click(async function(event){
 
+    $('#loading').show()
+
     
 
     hash = await callStatic('get_file_by_index', [1])
@@ -112,7 +114,7 @@ $('#addFile').click(async function(event){
       // document.getElementById('view').innerHTML = ""
 
 
-
+      $('#loading').hide()
 
   })
     // console.log("File Added To The Contract:",new_file)
