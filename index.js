@@ -87,8 +87,9 @@ $('#addFile').click(async function(event){
   console.log("------------------")
   var fileAdded = await node.add(file)
   fileAdded.forEach(async (file) => {
-    console.log("successfully stored", file.hash)
+    
     const new_file = await contractCall('add_file', [name, description, file.hash],0);
+    console.log("successfully stored", file.hash)
     // return file.hash
 
     
@@ -106,9 +107,11 @@ $('#addFile').click(async function(event){
     hash = await callStatic('get_file_by_index', [1])
     console.log("getting file: ", hash.file_hash)
 
+      await node.cat(hash.file_hash)
+
+      // document.getElementById('view').innerHTML = ""
 
 
-      await node.get(hash.file_hash)
 
 
   })
