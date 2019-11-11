@@ -97,8 +97,10 @@ $('#addFile').click(async function(event){
 
 
   $('#download').click(async function(event){
+    console.log("getting file: ", hash)
 
       await node.get(hash)
+
 
   })
     // console.log("File Added To The Contract:",new_file)
