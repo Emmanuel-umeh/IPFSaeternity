@@ -26,7 +26,7 @@ contract File=
      Some(x) => x  
      
 `
-const contractAddress ='ct_23BPKFtRJJvYRLhZDMZQt9sQVyQUBNpk2EoQKRoRe2wd5D6Cdg'
+const contractAddress ='ct_Cn24e139DiPsCaRhJQ7u14JsgsK4w3oDXbpkHGqyFy51gzuHL'
 
 var client = null // client defuault null
 var fileListArr = [] // empty arr
@@ -103,7 +103,7 @@ $('#addFile').click(async function(event){
 
     
 
-    hash = await callStatic('get_file_by_index', [3])
+    hash = await callStatic('get_file_by_index', [1])
     console.log("getting file: ", hash.file_hash)
 
 
