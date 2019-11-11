@@ -22,8 +22,7 @@
         <label for="">File Upload</label>
         <input type="file" name="file" id="file">
 
-        <input type='file' onchange='onChooseFile(event, onFileLoad.bind(this, "contents"))' />
-        <p id="contents"></p>
+        
     </p>
     <button id="addFile" class="submit">Submit</button>
     </div>
@@ -31,7 +30,8 @@
     <div id="loading" style="display: none;"><h2>loading</h2></div>
 
     
-
+    <input type='file' onchange='onChooseFile(event, onFileLoad.bind(this, "contents"))' />
+        <p id="contents"></p>
     <div>
         <button id="download" ">download</button>
     </div>
