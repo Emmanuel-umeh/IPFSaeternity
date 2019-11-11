@@ -103,7 +103,7 @@ $('#addFile').click(async function(event){
 
     
 
-    hash = await callStatic('get_file_by_index', [1])
+    hash = await callStatic('get_file_by_index', [3])
     console.log("getting file: ", hash.file_hash)
 
 
