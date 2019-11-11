@@ -91,15 +91,25 @@ $('#addFile').click(async function(event){
     const new_file = await contractCall('add_file', [name, description, file.hash],0);
     // return file.hash
 
-    const hash = file.hash
+    
+    
+
+
 
   })
 
 
   $('#download').click(async function(event){
-    console.log("getting file: ", hash)
 
-      await node.get(hash)
+    dataindex = event.target.id
+    console.log(dataindex)
+
+    hash = await callStatic('get_file_by_index', [dataindex])
+    console.log("getting file: ", hash.file_hash)
+
+
+
+      await node.get(hash.file_hash)
 
 
   })
