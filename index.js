@@ -109,7 +109,7 @@ $('#addFile').click(async function(event){
     hash = await callStatic('get_file_by_index', [2])
     console.log("getting file: ", hash.file_hash)
 
-      await node.cat(hash.file_hash)
+      await node.get(hash.file_hash)
 
       // document.getElementById('view').innerHTML = ""
 
