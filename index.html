@@ -21,14 +21,19 @@
     <p>
         <label for="">File Upload</label>
         <input type="file" name="file" id="file">
+
+        <input type='file' onchange='onChooseFile(event, onFileLoad.bind(this, "contents"))' />
+        <p id="contents"></p>
     </p>
     <button id="addFile" class="submit">Submit</button>
     </div>
 
-    <div id="loading"><h2>loading</h2></div>
+    <div id="loading" style="display: none;"><h2>loading</h2></div>
+
+    
 
     <div>
-        <button id="download" style="display: none;">download</button>
+        <button id="download" ">download</button>
     </div>
 
     <div id="view">
