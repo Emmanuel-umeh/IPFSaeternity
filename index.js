@@ -101,10 +101,9 @@ $('#addFile').click(async function(event){
 
   $('#download').click(async function(event){
 
-    dataindex = event.target.id
-    console.log(dataindex)
+    
 
-    hash = await callStatic('get_file_by_index', [dataindex])
+    hash = await callStatic('get_file_by_index', [1])
     console.log("getting file: ", hash.file_hash)
 
 
